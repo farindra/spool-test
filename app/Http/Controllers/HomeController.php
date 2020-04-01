@@ -10,8 +10,10 @@ use App\Comment;
 class HomeController extends Controller
 {
     
-    public function index($slug = null )
+    public function index($slug = null, Request $request )
     {
+        $request->session()->remove('info');
+        
         switch($slug){
             case 'user-post-comments':
                 $page = ['title' => 'User Post Comments', 'name'=> 'user_post_comments', 'data_list' => User::userListComments() ];
@@ -21,7 +23,8 @@ class HomeController extends Controller
                 break;
             default:
                 $page = ['title' => 'Post', 'name'=> 'posts', 'data_list' => Post::orderBy('created_at','desc')->get()  ];
-
+                $request->session()->flash('info', 'Selamat Datang, Slahkan pilih menu di atas untuk informasi lainnya');
+                // session('info','Selamat Datang, Slahkan pilih menu di atas untuk informasi lainnya');
         }
 
         $data = [
