@@ -7,7 +7,7 @@
  5. jalankan aplikasi `php artisan serve` atau langsung menuju host local anda masing masing
 
 #### Arsitektur, prinsip, pendekatan, atau hal lainnya yang digunakan dalam pengembangan aplikasi ini :
-Arsitektur menggunakan MVC, pirnsip nya semua data yang dibutuhkan oleh view dikelola madiri pada setiap model dan controler hanya sebagai kontrol transaksi antara keduanya.
+Arsitektur menggunakan MVC, pirnsip nya semua data yang dibutuhkan oleh view dikelola mandiri pada setiap model dan controler hanya sebagai kontrol transaksi antara keduanya.
 
 #### Kekurangan dari aplikasi yang dibangun ini dalam beberapa aspek berikut :
  1. Fitur
